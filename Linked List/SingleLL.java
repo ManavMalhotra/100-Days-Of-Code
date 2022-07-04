@@ -144,6 +144,21 @@ public class SingleLL{
 
 
 	}
+	//DELETE DUPLICATE
+		public void deleteDuplicate(){
+		Node temp = head;
+		if(head == null){
+			return;
+		}
+		while(temp.next != null){
+			if (temp.data == temp.next.data) {
+				temp.next = temp.next.next;
+			}else{
+				temp = temp.next;
+			}
+
+		}
+
 
 	public static void main(String[] args) {
 		SingleLL newNode = new SingleLL();
